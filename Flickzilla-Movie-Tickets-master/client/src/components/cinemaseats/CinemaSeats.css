@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --selected-color: #2ecc71;
+  --occupied-color: #e74c3c;
+  --available-color: #fff;
+}
+
+
+.upper-cinemaroom{
+    display: flex;
+
+}
+
+
+.cinema-seats-screen{
+    display: flex;
+    
+   align-items: center;
+
+}
+.row{
+    display: flex;
+}
+
+
+
+.cinema-seats-container {
+
+    width: 100%;
+  font-family: "Lato", sans-serif;
+
+  color: white;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  overflow: hidden;
+}
+
+.cinema-seats-container label {
+  margin: 20px 0;
+}
+
+.cinema-seats-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.cinema-seats {
+  perspective: 1000px;
+  margin-bottom: 3px;
+}
+
+.cinema-seat {
+
+  background-color: #444451;
+  height: 20px;
+  width:35px;
+  margin: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cinema-seat.taken{
+  background-color: rgb(230, 6, 99);
+}
+.cinema-seat.selected {
+  background-color: var(--selected-color);
+}
+
+.cinema-seat.occupied {
+  background-color: var(--available-color);
+}
+
+.cinema-seat:not(.occupied) {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.cinema-seats-text {
+  margin: 5px 0;
+  color: #777;
+}
+
+.cinema-seats-text span {
+  color: #6feaf6;
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.7);
+}

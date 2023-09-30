@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .image {
+        width: 100%;
+        background-image: url(${populatedMovie.backdrop[0]});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center; /* Center the background image */
+        opacity: 0.8;
+        text-align: center;
+      }
+      .info {
+        padding: 120px 0;
+        color: #fff;
+      }
+      .link {
+            background-color: #ff0062;
+            padding: 15px 30px;
+            font-size: large;
+            text-decoration: none;
+        }
+        .btn{
+            margin-top: 50px;
+        }
+        .btn a{
+            color:#fff; 
+        }
+        .end{
+            margin-top: 50px;
+        }
+        ul li{
+            list-style: none;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <h1 class="info">${populatedMovie.title}</h1>
+      </div>
+      <div class="btn">
+     <h1>Dear ${user.firstName},</h1>
+      <p>We're excited to announce a new movie has been added to Flickzilla!</p>
+      <p>Check out the details:</p>
+      <ul>
+        <li>${populatedMovie.title}</li>
+        <li>${populatedMovie.genre}</li>
+      </ul>
+      <p>With actors :<br>
+        ${populatedMovie.actors}
+    </p>
+      </div>
+      <div class="btn">
+          <a class="link" href="${movieLink}">Get Ticket</a>
+      </div>
+      <div class="end">
+        <p>Get your ticket now</p>
+        <p>Enjoy watching!</p>
+        <p>Flickzilla</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.navbar{
+    background-color: transparent;
+    position: fixed;
+    border-bottom: 1px solid #ffffff30;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.flicklogo{
+    background: linear-gradient(to right, #ff0062, #c3a9ff);
+    -webkit-background-clip: text;
+    background-clip: text; /* Add standard background-clip property */
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 480px) {
+    .navbar {
+      padding: 0; /* Adjusted height for small screens */
+    }
+  }

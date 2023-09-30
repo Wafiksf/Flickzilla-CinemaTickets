@@ -1,0 +1,40 @@
+.contact{
+    color: #fff;
+}
+.child-contact{
+position: relative;
+padding: 20px;
+}
+
+.child-contact::after{
+    position: absolute;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/background-contact-info-1.png');
+    background-size: cover;
+    opacity: 0.2;
+    mix-blend-mode: luminosity;
+    pointer-events: none; /* This prevents the pseudo-element from interfering with the content */
+}
+
+.parent-contact{
+    position: relative;
+}
+
+.parent-contact::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/background-map-contact-page.jpg');
+    background-size: cover;
+    opacity: 0.09;
+    mix-blend-mode: luminosity;
+    pointer-events: none; /* This prevents the pseudo-element from interfering with the content */
+}

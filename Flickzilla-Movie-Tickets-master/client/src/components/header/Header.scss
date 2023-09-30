@@ -1,0 +1,41 @@
+.effect-links a {
+    background-image: linear-gradient(
+      to right,
+      #ff0062,
+      #c3a9ff 50%,
+      #fff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text; /* Add standard background-clip property */
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+ .effect-links a:before{
+    content: '';
+    background: linear-gradient(
+        to right,
+        #ff0062,
+        #c3a9ff
+      );
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .effect-links a:hover {
+   background-position: 0;
+  }
+  
+  .effect-links a:hover::before{
+    width: 100%;
+  }

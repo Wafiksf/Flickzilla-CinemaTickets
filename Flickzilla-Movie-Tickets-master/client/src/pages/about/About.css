@@ -1,0 +1,328 @@
+.robot-about {
+  position: relative;
+  background-color: #000000;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.robot-about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.6;
+}
+
+.robot-about h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 480px) {
+  .robot-about {
+    height: 250px; /* Adjusted height for small screens */
+  }
+}
+
+  /* section 1 */
+  
+  .top-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  
+  /* section 2*/
+  .moviesNowPlaying-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
+  .moviesNowPlaying-about p{
+    margin-top: 8px;
+  }
+  
+  .moviesNowPlaying-about h1{
+    font-size: 50px;
+  }
+
+  .about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  .about-us-container h2 {
+    font-size: 24px;
+    margin: 30px 0 10px;
+  }
+  
+  .about-us-container ul {
+    text-align: left;
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  
+  .about-us-container li {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+
+  .about-us-content {
+    display: flex;
+    align-items: center;
+   
+  }
+  
+  .about-us-content-p {
+    padding-right: 20px;
+  }
+  
+  .about-us-content-img {
+    padding-left: 20px;
+  }
+  
+  .animated-slide-in {
+    opacity: 0;
+    transform: translateX(-20%); 
+    animation: fadeInLeft 3s forwards; 
+  }
+  
+  .animated-slide-in-right {
+    opacity: 0;
+    transform: translateX(20%); 
+    animation: fadeInRight 3s forwards;
+  }
+  
+  @media (min-width: 900px) {
+    .animated-slide-in,
+    .animated-slide-in-right {
+      transform: translateX(50%);
+    }
+  }
+  @media (max-width: 1000px) {
+    .about-us-content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+     
+    }
+    .about-us-content-img {
+      padding-top: 20px;
+      padding-left: 0px;
+    }
+    .about-us-content-p {
+      padding-right: 0px;
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  /* section 3*/
+  
+  .testimonial-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-image: url('https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/background-feedback-home-1.png');
+    background-size: cover;
+    background-position: right;
+    height: 90vh; 
+}
+
+.testimonial-container {
+    width: 100%; 
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.feedback-item {
+  padding: 40px; /* Increase the padding to make content larger */
+  background: linear-gradient(to right, #ff0062, #c3a9ff);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #8e67e9;
+  text-align: center;
+}
+
+.feedback-item:not(.slick-center) {
+  transform: scale(1); /* Slightly increase the scale */
+  opacity: 0.9;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Increase the margin to match larger padding */
+}
+
+.author .image img {
+  width: 70px; /* Increase the image size */
+  height: 70px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.author .info {
+  margin-left: 15px; /* Increase the margin to match larger padding */
+}
+
+.author .name {
+  font-size: 18px; /* Increase font size */
+  font-weight: bold;
+  color: #222;
+}
+
+.author .job {
+  font-size: 16px; /* Increase font size */
+  color: #1b0159b9;
+}
+
+.content {
+  font-size: 18px; /* Increase font size */
+  line-height: 1.6;
+  color: #333;
+}
+
+.image-slider {
+  text-align: center;
+  margin: 40px 0; /* Increase the margin to match larger padding */
+}
+
+.image-slider img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  /* section 4*/
+
+  .custom-section {
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url("https://marketplace.canva.com/EAFI6KdWn7Q/1/0/1600w/canva-black-yellow-bold-modern-vip-movie-ticket-v4XBtggVgkM.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .custom-text-editor {
+    margin-bottom: 20px;
+  }
+  
+  .custom-text-container {
+    padding: 60px;
+    background-color: rgba(178, 201, 240, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .custom-title {
+    color: #fefcfc;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-button {
+    display: inline-block;
+    padding: 20px 20px;
+    background-color: #8e67e9;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #fd5f9b;
+  }
+
+  /* section 5 */
+
+  .feedback-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-image: url('https://media.canadianunderwriter.ca/uploads/2020/06/iStock-686746978-film.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    max-width: 1200px;
+    height: 50vh; 
+  }
+
+
+  .feedback-form {
+    margin: 40px;
+    width: 70%;
+  }
+  
+  .feedback-form h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .feedback-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    resize: vertical;
+  }
+  
+  .feedback-form button {
+    background-color: #ff0062;    
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feedback-form button:hover {
+    background: linear-gradient(to right, #ff0062, #c3a9ff);
+  }

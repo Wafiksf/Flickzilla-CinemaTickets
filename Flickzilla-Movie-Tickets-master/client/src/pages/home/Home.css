@@ -1,0 +1,421 @@
+body{
+    background-color: #ffffff;
+}
+.firstSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #fff;
+    position: relative; /* Add this to enable positioning for pseudo-element */
+  }
+  
+  /* Add the following ::after pseudo-element to apply background styles with opacity and mix-blend-mode */
+  .firstSec::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/big-bg-film.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+    opacity: 0.06;
+    mix-blend-mode: luminosity;
+    pointer-events: none; /* This prevents the pseudo-element from interfering with the content */
+  }
+  
+  .rubon img {
+    width: 100%;
+  }
+  .movies{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .moviesNowPlaying{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
+  .moviesNowPlaying p{
+    margin-top: 8px;
+  }
+  
+  .moviesNowPlaying h1{
+    font-size: 50px;
+  }
+  @media (max-width: 480px) {
+    .moviesNowPlaying h1{
+      font-size: 25px;
+    }
+  }
+  
+  .movie {
+    width: 290px;
+    height: 430px;
+    text-align: center;
+    margin: 20px 8px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+  }
+  @media (max-width: 480px) {
+    .movie {
+      width: 125px;
+      height: 188px;
+    }
+  }
+  .movie img {
+    width: 100%;
+    height: 100%;
+  }
+  .movie:hover .movieInfo{
+    top: 0;
+}
+.movie:hover{
+  border-color: #ff0062;
+}
+.movieInfo{
+    color: rgb(0, 0, 0);
+    background-color: #0000007d;
+    color: #fff;
+    position: absolute;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    text-align: left;
+    overflow: hidden;
+}
+.movieInfo p{
+  margin-top: 10px;
+}
+.moreInfoBtn{
+  border: 1px solid #ff0062;
+  padding: 10px 20px;
+  margin: 15px 0px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+}
+@media (max-width: 480px) {
+  .hide {
+    display: none;
+  }
+  .moreInfoBtn{
+    padding: 5px 10px;
+    font-size: small;
+  }
+}
+.bookBtn{
+  border: 1px solid #ff0062;
+  padding: 10px 20px;
+  margin: 15px 5px;
+  font-weight: bold;
+  background-color: #ff0062;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+}
+  
+/* CSS for the backdrop section */
+.backdrop {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @media (max-width: 480px) {
+    .backdrop {
+      height: 250px; /* Adjusted height for small screens */
+    }
+  }
+  @media (max-width: 1000px) {
+    .playButton{
+      display: none;
+    }
+    .comingsIn{
+      display: none;
+    }
+  }
+  .youtube-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+    .youtube-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.4); /* Apply zoom effect by default */
+    }
+    
+  .backdrop .cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.6;
+  }
+  
+  .backdrop .moreInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 6%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .genre{
+    line-height: 0;
+  }
+  .title{
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-weight: bold;
+    font-size: 90px;
+  }
+  .ticketBtn{
+    border: none;
+    padding: 18px 50px;
+    margin-top: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff0062, #c3a9ff);
+    color: #fff;
+    cursor: pointer;
+  }
+  @media (max-width: 480px) {
+    .ticketBtn {
+      padding: 9px 25px;
+      margin-top: 15px;
+      font-size: 10px;
+    }
+    .title{
+      font-size: 25px;
+    }
+  }
+  .playButton{
+    position: absolute;
+    background-color: #0000007e;
+    right: 0;
+    bottom: 30%;
+    padding: 5px 50px 5px 5px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .sec {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .upMovies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px 0;
+  }
+  
+  .upMovie {
+    margin: 0 20px;
+    border: 4px solid transparent;
+    position: relative;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .upMovie:hover{
+    border-color: #ff0062;
+  }
+  
+  .upMovies figure img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  
+  .upMovies figure:hover img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  figure {
+    display: flex;
+    width: 350px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+  }
+  
+  .moviesUpcoming {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .childInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    opacity: 1;
+  }
+
+.wTrailer{
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+}
+
+.upMovies figure:hover .childInfo .wTrailer {
+  color: #fff;
+  background-color: #ff0062;
+}
+.service-icon{
+  color: #ff0062;
+}
+
+.showmoreBtn{
+  border: none;
+  padding: 18px 50px;
+  margin-bottom:20px;
+  font-size: 15px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff0062, #c3a9ff);
+  color: #fff;
+  cursor: pointer;
+}
+.animated-slide-in-home {
+  animation: slideInHome 1s forwards;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+@keyframes slideInHome {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.home-trending{
+  position: relative;
+}
+.home-trending::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/background-event-home-1.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.15;
+  mix-blend-mode: luminosity;
+}
+
+.moviesNowPlaying-left p{
+  margin-top: 8px;
+}
+
+.moviesNowPlaying-left h1{
+  font-size: 50px;
+}
+.cont-trending-info{
+  padding-left: 40px;
+}
+@media (max-width: 480px) {
+  .moviesNowPlaying-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .moviesNowPlaying-left p{
+    text-align: center;
+  }
+  .div-cont-movieleft{
+    padding-left: 0;
+  }
+  .moviesNowPlaying-left h1{
+    font-size: 25px;
+  }
+  .trending-btn{
+    margin-bottom: 20px;
+  }
+  .link-p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .link-p p{
+    text-align: center;
+  }
+  .cont-trending-info{
+    padding-left: 0px;
+  }
+}
+
+.trending-btn{
+  background: linear-gradient(to right, #ff0062, #c3a9ff);
+}
+
